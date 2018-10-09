@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class BootstrapRetrofit{
 
-    private val END_POINT = "http://urbano.eti.br:4567/api/contact/"
+    private val END_POINT = "http://somedomain/context/resource" //http://somedomain/context/resource
 
     fun retrofit() : Retrofit {
 
