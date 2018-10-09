@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_name">Enter your name</string>
+    <string name="txt_phone_number">Enter you phone number</string>
+    <string name="txt_address">Enter your address</string>
+</resources>

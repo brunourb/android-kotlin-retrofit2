@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import br.eti.urbano.mobile.contact.R
 import br.eti.urbano.mobile.contact.model.Contact
-import kotlinx.android.synthetic.main.item_customer.view.*
+import kotlinx.android.synthetic.main.activity_contact.view.*
+import kotlinx.android.synthetic.main.item_contact.view.*
 
 class ContactAdapter(private val contacts : List<Contact>,
                      private val context: Context) : RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
@@ -18,7 +19,7 @@ class ContactAdapter(private val contacts : List<Contact>,
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_customer, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_contact, parent, false)
         return ViewHolder(view)
     }
 
@@ -31,11 +32,13 @@ class ContactAdapter(private val contacts : List<Contact>,
         fun bindView(contact : Contact){
 
             val name = itemView.txtItemName
-            val phone = itemView.txtItemPhone
+            val phones = itemView.txtItemPhone
+            val address = itemView.txtItemAddress
 
             //parse to view item view
             name.text = contact.name
-            phone.text = contact.phone
+            phones.text = contact.phones
+            address.text = contact.address
 
         }
     }

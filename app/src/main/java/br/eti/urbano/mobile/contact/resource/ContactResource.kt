@@ -6,16 +6,16 @@ import retrofit2.http.*
 
 interface ContactResource {
 
-    @GET("customer")
+    @GET(".")
     fun get(): Call<List<Contact>>
 
-    @POST("contact")
+    @POST(".")
     fun post(@Body contact: Contact): Call<Contact>
 
-    @PUT("customer/{id}")
-    fun put(@Path("id") id : Integer)
+    @PUT(".")
+    fun put(@Body contact: Contact) : Call<Contact>
 
-    @DELETE("customer/{id}")
+    @DELETE("/{id}")
     fun delete(@Path("id") id : Integer)
 
 }
